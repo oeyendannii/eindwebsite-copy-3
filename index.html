@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio.DanniiOeyen</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./css/lightbox.min.css">
+    <script src="./js/lightbox-plus-jquery.min.js" defer></script>
+</head>
+<body>
+    <aside>
+        <nav class="menu">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Contact" id="contact-link">Contact</a>
+        </nav>
+      </aside>
+<main>
+<!-- home section--> 
+        <section class="home" id="Home">
+        <div class="title-container">
+            <h2 class="title-upper">Dannii</h2>
+            <div class="title-down-container">
+              <h2 class="title-down">Oeyen</h2>
+            </div>
+            <p>Visual Design Student</p>
+            <p>Portfolio</p>
+        </div>
+        <div class="image-container">
+            <a href="asset/myself.JPG">
+                <img src="asset/myself.JPG" alt="myself">
+            </a>
+        </div> 
+        </section>
+
+<!-- about section--> 
+    <section class="about" id="About">
+        <div class="about-container">
+            <h2 class="about-upper">Something about me</h2>
+            <p>Hi! I'm a 20 year old visual design student, in LUCA Gent. Last year I also studied graphic design in Antwerp, but chose to switch schools, due preference of teaching styles.</p>
+            <p>Right now my goal is to learn as many different techniques of this industry and to not focus on one specific thing. With the purpose that I can go in different direction after my study. 
+            But if you wonder where my preference stands, it's the advertisement community. To create packaging and labels for different brands. But on the other side doing this, creating a website fascinates me aswell (I'm a beginner in the webdesign community so bare with me ;))</p>     
+            <p>And if I'm not hours behind my computer I find joy in the simpel things, like hanging out with friends and spending time outside. I'm someone who likes things to be simpel yet powerfull enough to send a message, something you can find in some of my work.</p>
+            <div class="about-down-container">
+            <h2 class="about-down">My skills</h2>
+                <img src="asset/Component 10.jpg" alt="">
+        </div>
+    </section>
+
+<!-- projects section--> 
+    <section class="projects" id="Projects">
+        <div class="projects-container">
+            <h2 class="projects-upper">Some work of mine</h2>
+            <p>Here you can find a small section of previous works of mine, most of them were made with a time-limit of 5-10 minutes. As I mentioned earlier, you can see that I like simplicity and like to keep it clean and easy to uderstand. 
+            I also realy love to play with typography, to not only send a message by reading but also by looking.</p>
+            <div class="images-container">
+                <a href="asset/2.jpg" data-lightbox="main" data-title="Project 1.1">
+                    <img src="asset/2.jpg" alt="" />
+                  </a>
+                  <a href="asset/3.jpg" data-lightbox="main" data-title="Project 1.2">
+                    <img src="asset/3.jpg" alt="" />
+                  </a>
+                  <a href="asset/7.jpg" data-lightbox="main" data-title="Project 1.3">
+                    <img src="asset/7.jpg" alt="" />
+                  </a>
+                  <a href="asset/8.jpg" data-lightbox="main" data-title="Project 1.4">
+                    <img src="asset/8.jpg" alt="" />
+                  </a>
+                  <a href="asset/4.jpg" data-lightbox="main" data-title="Project 2.1">
+                    <img src="asset/4.jpg" alt="" />
+                  </a>
+                  <a href="asset/5.jpg" data-lightbox="main" data-title="Project 2.2">
+                    <img src="asset/5.jpg" alt="" />
+                  </a>
+                  <a href="asset/9.jpg" data-lightbox="main" data-title="Project 2.3">
+                    <img src="asset/9.jpg" alt="" />
+                  </a>
+                  <a href="asset/10.jpg" data-lightbox="main" data-title="Project 2.4">
+                    <img src="asset/10.jpg" alt="" />
+                  </a>
+                  <a href="asset/11.jpg" data-lightbox="main" data-title="Project 2.5">
+                    <img src="asset/11.jpg" alt="" />
+                  </a>
+                  <a href="asset/1.jpg" data-lightbox="main" data-title="Project 3">
+                    <img src="asset/1.jpg" alt="" />
+                  </a>
+                  <a href="asset/6.jpg" data-lightbox="main" data-title="Project 4">
+                    <img src="asset/6.jpg" alt="" />
+                  </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal contact hidden" id="contact-modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Contact me!</h3>
+          <p>tel: (+32) 0499406401</p>
+          <a href="mailto:dannii.oeyen@gmail.com">email: dannii.oeyen@gmail.com</a>
+          <p>locatie: Gent, Belgium</p>
+        </div>
+      </div>
+</main>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById("contact-modal");
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("contact-link");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>  
+</body>
+</html>

@@ -1,0 +1,309 @@
+:root{
+    --color-primary-text: rgb(0, 0, 0);
+    --color-background: rgb(255, 255, 255);
+    --color-grey: #292d32;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  html{
+    color-scheme: light;
+    scroll-behavior: smooth;
+  }
+  
+  body{
+    background: var(--color-background);
+    color: var(--color-primary-text);
+    margin: 0;
+    font-family: "Poppins", "Futura", sans-serif;
+  }
+
+  a{
+    color: inherit;
+    text-decoration: none;
+  }
+
+  aside{
+    display: flex;
+    width: 85px;
+    height: 100vh;
+    padding: 48px 32px;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    flex-shrink: 0;
+    background: #fff;
+    position: fixed;
+    right: 0;
+    border-left: 1px solid #ababab;
+  }
+
+  aside .menu a:hover{
+    color: crimson;
+  }
+
+  nav{
+    display: flex;
+    height: 21px;
+    transform: rotate(+90deg);
+    justify-content: center;
+    align-items: center;
+    gap: 199px;
+    flex: 1 0 0;
+    z-index: 1;
+  }
+
+  .images-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    float: left;
+    margin-top: 15px;
+  }
+
+  .image-container img{
+    display: flex;
+    width: 53vw;
+    height: 100vh;
+    left: 100px;
+    align-items: left;
+    padding: 40px 100px;
+  } 
+
+  .title-container{
+    display: flex;
+    width: 40,5vw;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+    position: fixed;
+    right: 100px;
+    padding-top: 20px;
+  }
+  
+  .title-down, .title-upper{
+    font-size: 7rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 7rem;
+    text-transform: uppercase;
+  }
+  
+  .title-upper{
+    align-self: stretch;
+    text-align: right;
+  }
+  
+  .title-down{
+    flex: 1 0 0;
+    text-align: right;
+  }
+
+  .about-container{
+    padding: 90px 100px;
+    align-items: flex-end;
+    align-self: flex-end;
+  }
+  
+  .about-down, .about-upper{
+    line-height: 6rem;
+  }
+  
+  .about-upper{
+    align-self: stretch;
+    text-align: left;
+    flex: 1 0 0;
+  }
+  
+  .about-down{
+    align-self: stretch;
+    text-align: left;
+    flex: 1 0 0;
+    display: flex;
+  }
+
+  .about-down-container img{
+    width: 600px;
+    height: ;
+  }
+ 
+  .about-container p{
+    text-align: justify;
+    flex-direction: column;
+    width: 600px;
+    white-space: 2px;
+  }
+
+  .projects-container{
+    padding: 160px 100px;
+    align-items: flex-end;
+    align-self: flex-end;
+  }
+  
+  .projects-down, .projects-upper{
+    line-height: 6rem;
+  }
+  
+  .projects-upper{
+    align-self: stretch;
+    text-align: left;
+    flex: 1 0 0;
+  }
+  
+  .projects-down{
+    align-self: stretch;
+    text-align: left;
+    flex: 1 0 0;
+  }
+ 
+  .projects-container p{
+    text-align: justify;
+    flex-direction: column;
+    width: 600px;
+  }
+
+  .images-container{
+    display: flex;
+    width: 90vw;
+    height: auto;
+    align-items: center;
+    gap: 14px;
+    float: right;
+    overflow: scroll;
+    padding: 0 50px;
+    margin: 20px 0;
+    margin-bottom: 40px;
+  }
+  
+  .images-container img{
+    min-width: 250px;
+  }
+
+  img{
+    max-width: 100%;
+    display: block;
+  }
+
+  .hidden{
+    display: none;
+  }
+
+.modal-contact-hidden{
+    padding: 180px 100px;
+    align-items: flex-end;
+    align-self: flex-end;
+    background-color: #fff;
+    background-size: auto;
+}
+
+.column{
+    padding: 180px 100px;
+    float: left;
+    width: 40%;
+    gap: 10px;
+    background-color: #fff;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+  /*MODAL*/
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    line-height: 2rem;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  .modal-content a:hover{
+    color: crimson;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width:800px){
+    html{
+        font-size: 55%;
+    }
+    .image-container img{
+        size-adjust: auto;
+    }
+    }
+  @media screen and (max-width:500px){
+    header .fa-bars{
+        display: block;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fbebd4;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #f9e6cb;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    .home .content h1{
+        font-size: 5rem;
+    }
+    .home .content .span{
+        font-size: 2.5rem;
+    }
+    .levensloop .row{
+        background-size: contain;
+    }
+    }
+  @media screen and (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+   
+    }
+  
+
+
+ 
+
